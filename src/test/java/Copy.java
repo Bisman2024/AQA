@@ -1,3 +1,4 @@
+/*
 import Hi.System;
 import org.junit.jupiter.api.AfterEach;
 import org.openqa.selenium.By;
@@ -15,7 +16,7 @@ import java.time.Duration;
 
 import static org.testng.Assert.assertEquals;
 
-public class MtsOnlineTest {
+public class MtsOnline2Test {
     private WebDriver driver;
     private WebDriverWait wait;
 
@@ -79,19 +80,6 @@ public class MtsOnlineTest {
         Assert.assertTrue(paymentLogos.isDisplayed());
     }
 
-    // Проверить работу ссылки "Подробнее о сервисе"
-    @Test
-    public void testDetailService() {
-        WebElement detailsLink = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Подробнее о сервисе")));
-        detailsLink.click();
-        Assert.assertTrue(driver.getCurrentUrl().contains("https://www.mts.by/help/poryadok-oplaty-i-bezopasnost-internet-platezhey/"));
-        driver.navigate().back();
-    }
-    @AfterEach
-    public void testDetailServiceQuit() {
-        driver.quit();
-    }
-
     // Заполнить поля и проверить работу кнопки "Продолжить"
     @Test
             public void testServiceType() {
@@ -103,13 +91,12 @@ public class MtsOnlineTest {
         continueButton.click();
 }
 
-
-    @AfterClass
+@AfterClass
     public void tearDown() {
         if (driver != null) {
             driver.quit();
         }
     }
 }
-
+*/
 
